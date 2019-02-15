@@ -1,0 +1,343 @@
+/* Ctrstat css */
+@font-face {
+    src: url("d2coding.ttf");
+}
+
+#lblStatBarTitle {
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 14;
+}
+
+#lblStatBarContent {
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 12;
+}
+
+#dialogLabel{
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 12;
+}
+
+#dialogTxtField{
+	-fx-background-color: #103554;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 14;
+}
+
+#dialogBtn{
+	-fx-background-color: #2C3034;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 14;
+}
+
+#vbox {
+	-fx-background-color: #222222;
+}
+
+#btnClear{
+	-fx-background-color: #2C3034;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 12;
+}
+
+#btnCtrlstat{
+	-fx-background-color: #103554;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 13;
+}
+
+#btnAttach{
+	-fx-background-color: #FF3C43;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 11;
+}
+
+#btnDettach{
+	-fx-background-color: #4A90E2;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 11;
+}
+
+#btnHeading{
+	-fx-background-color: transparent;
+}
+
+#txtCtrlstat{
+	-fx-background-color: #103554;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 14;
+}
+
+#txtMission{
+	-fx-background-color: #103554;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 12;
+}
+
+#txtNoFlyZone{
+	-fx-background-color: #103554;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 12;
+}
+
+#lblMapTypeControl{
+	-fx-background-color: #2C3034;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 15;
+	-fx-background-radius: 10px;
+}
+ 
+#labelCtrlstat1{
+	-fx-text-fill: #a2a2a2;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 17;
+	-fx-padding: 0 0 5 0;
+}
+
+#labelCtrlstat2{
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 17;
+	-fx-padding: 0 0 5 0;
+}
+#labelCtrlstat3{
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 17;
+}
+.tab-pane{
+	-fx-background-color:#222222;
+	-fx-tab-min-width:156px;
+  	-fx-tab-max-width:156px;
+  	-fx-tab-min-height:30px;
+  	-fx-tab-max-height:30px;
+}
+
+.tab{
+	-fx-background-color: #2C3034;
+}
+
+.tab-header-background {
+    -fx-background-color: #222222;
+}
+
+.tab .tab-label{
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 13;
+}
+
+.tab:selected{
+    -fx-background-color:  #222222;
+    -fx-background-insets: 0;
+}
+
+.tab:selected .focus-indicator{
+	-fx-focus-color: transparent;
+	-fx-border-color: transparent;
+}
+
+#grid {
+    -fx-padding: 10;
+}
+
+.scroll-bar:horizontal {
+	-fx-background-color: #FFFFFF;
+}
+
+.scroll-bar:horizontal .track{
+	-fx-background-color: #FFFFFF;
+}
+
+/* hud css */
+#lblHud{
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 18;
+}
+
+/* mission css */
+#lblMapFix{
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 12;
+}
+
+#lblMission, #lblFence, #lblNoFlyZone, #lblConsoleView{
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 13;
+}
+
+#btnMission1, #btnFence1, #btnNoFlyZone1{
+	-fx-background-color: #103554;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 12;
+}
+
+#btnMission2, #btnFence2, #btnNoFlyZone2{
+	-fx-background-color: #222F3E;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 12;
+}
+
+#hboxMission{
+	-fx-background-color: #2C3034;
+}
+#lblShowMsg{
+	-fx-text-fill: gold;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 65;
+}
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view .filler{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+} 
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: D2Coding;
+	-fx-font-size: 13;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-column{
+	-fx-table-cell-border-color: transparent;
+    -fx-alignment:center;
+}
+
+.table-row-cell {
+	-fx-background-color: white;
+    -fx-font-family: D2Coding;
+	-fx-font-size: 14;
+}
+
+.table-row-cell:empty {
+	-fx-background-color: white;
+    -fx-font-family: D2Coding;
+	-fx-font-size: 14;
+}
+
+.table-row-cell:hover{
+    -fx-background-color: blanchedalmond;
+}
+ 
+.table-row-cell:selected{
+    -fx-background-color: #ffdab3;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: black ;
+}
+
+.list-view{
+   -fx-background-color: transparent;
+}
+/* settings css */
+#hboxSettings{
+	-fx-background-color: #222222;
+}
+
+#lblNotice{
+	-fx-text-fill: #ff9966;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 20;
+}
+#btnSettings{
+	-fx-background-color: #222F3E;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 16;
+}
+
+#lblSettingsTitle{
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 30;
+}
+
+#lblSettingsName{
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 25;
+}
+
+#lblSettingsParamName{
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 20;
+}
+
+#lblSettingsDetail{
+	-fx-text-fill: #a2a2a2;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 15;
+}
+
+#txtSettings{
+	-fx-background-color: #222F3E;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 16;
+}
+
+#txtSettingsNetwork{
+	-fx-background-color: #222F3E;
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 16;
+}
+
+#txtSettingsNetwork:readonly {
+    -fx-background-color: transparent;
+    -fx-text-fill: gray;
+}
+
+/* info css */
+#lblWriterInfo{
+	-fx-text-fill: #e0e0d1;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 18;
+}
+#lblWriterTitle{
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 22;
+	-fx-font-weight:bold;
+}
+#lblInfo{
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+	-fx-font-size: 20;
+}
+#lblInfo{
+	-fx-text-fill: white;
+	-fx-font-family: D2Coding;
+}

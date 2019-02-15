@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="stackPane" prefHeight="390.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gcs.lowercam.LowerCamViewerController">
+   <children>
+      <Canvas fx:id="canvas1" height="390.0" width="520.0" />
+      <Canvas fx:id="canvas2" height="390.0" width="520.0" />
+      <BorderPane fx:id="borderPane" minHeight="-Infinity" prefHeight="390.0" prefWidth="520.0" />
+   </children>
+</StackPane>

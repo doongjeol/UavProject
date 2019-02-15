@@ -1,0 +1,4 @@
+# GroundControlStation Project의 컴파일된 .class를 GitHub에 저장 방지
+GroundControlStation/bin
+UavMqttClient/SITL_MAVProxy/MAVProxy
+UavMqttClient/SITL_MAVProxy/SITL

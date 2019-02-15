@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox id="hboxSettings" prefHeight="1030.0" prefWidth="1810.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gcs.configurations.ConfigurationsController">
+   <children>
+      <VBox maxWidth="1.7976931348623157E308" />
+      <TabPane prefWidth="1810.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Network Config.">
+               <content>
+                  <VBox>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/settings_network.png" />
+                                 </image>
+                              </ImageView>
+                              <Label id="lblSettingsTitle" prefHeight="15.0" text="Network Configuration" />
+                              <Button id="btnSettings" fx:id="btnSaveNetwork" mnemonicParsing="false" text="Save" />
+                              <Button id="btnSettings" fx:id="btnResetNetwork" mnemonicParsing="false" text="Reset" />
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="100.0" spacing="5.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/settings_rtl.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label id="lblSettingsName" text="Mqtt Broker Address" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label id="lblSettingsParamName" prefWidth="450.0" text="Enter Mqtt Ip">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="30.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefWidth="10.0" />
+                                    <TextField id="txtSettingsNetwork" fx:id="txtMqttIp" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label id="lblSettingsParamName" prefWidth="450.0" text="Enter Mqtt Port">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="30.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefWidth="10.0" />
+                                    <TextField id="txtSettingsNetwork" fx:id="txtMqttPort" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox prefHeight="100.0" spacing="5.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/settings_uavtopic.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label id="lblSettingsName" text="Uav Topic" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label id="lblSettingsParamName" prefWidth="450.0" text="Enter Uav Publish Topic">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="30.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefWidth="10.0" />
+                                    <TextField id="txtSettingsNetwork" fx:id="txtUavPubTopic" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label id="lblSettingsParamName" prefWidth="450.0" text="Enter Uav Subscribe Topic">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="30.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefWidth="10.0" />
+                                    <TextField id="txtSettingsNetwork" fx:id="txtUavSubTopic" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox prefHeight="100.0" spacing="5.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/settings_cameratopic.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label id="lblSettingsName" text="Camera Topic" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label id="lblSettingsParamName" prefWidth="450.0" text="Enter Uav Camera Front Publish Topic">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="30.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefWidth="10.0" />
+                                    <TextField id="txtSettingsNetwork" fx:id="txtCameraPubTopicFront" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label id="lblSettingsParamName" prefWidth="450.0" text="Enter Uav Camera Front Subscribe Topic">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="30.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefWidth="10.0" />
+                                    <TextField id="txtSettingsNetwork" fx:id="txtCameraSubTopicFront" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label id="lblSettingsParamName" prefWidth="450.0" text="Enter Uav Camera Bottom Publish Topic">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="30.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefWidth="10.0" />
+                                    <TextField id="txtSettingsNetwork" fx:id="txtCameraPubTopicBottom" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label id="lblSettingsParamName" prefWidth="450.0" text="Enter Uav Camera Bottom Publish Topic">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="30.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox prefWidth="10.0" />
+                                    <TextField id="txtSettingsNetwork" fx:id="txtCameraSubTopicBottom" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+          <Tab text="UAV Flight Config.">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="32.0" fitWidth="32.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/settings_plane.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label id="lblSettingsTitle" prefHeight="15.0" text="UAV Flight Configuration" />
+                                    <Button id="btnSettings" fx:id="btnWriteParams" mnemonicParsing="false" text="Write Params" />
+                                    <Button id="btnSettings" fx:id="btnResetParams" mnemonicParsing="false" text="Reset Params" />
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="120.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/settings_rtl.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="lblSettingsName" prefHeight="15.0" prefWidth="98.0" text="RTL" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="350.0" text="RTL_ALT [ 0 ~ 8000 | cm ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtRtlAlt" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" minHeight="-Infinity" prefHeight="50.0" prefWidth="480.0" text="The minimum relative altitude the model will move to &#10;before Returning to Launch, Set to zero to land">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="480.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/settings_land.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="lblSettingsName" prefHeight="15.0" prefWidth="98.0" text="LAND" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="350.0" text="LAND_SPEED [ 30 ~ 200 | cm/s ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtLandSpeed" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" text="The descent speed for the final stage of landing in cm/s">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </VBox>
+                              <VBox prefHeight="120.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/settings_rngfnd.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="lblSettingsName" prefHeight="15.0" prefWidth="98.0" text="RNGFND" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="350.0" text="RNDFND_TYPE [ 0 ~ 15 | (N/A) ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtRngFnd" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" prefWidth="480.0" text="What type of rangefinder device that is connected.&#10;See the description info">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="240.0" prefWidth="498.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/settings_fence.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="lblSettingsName" prefHeight="15.0" prefWidth="98.0" text="FENCE" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="350.0" text="FENCE_ENABLE [ 0 ~ 1 | (N/A) ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtFenceEnable" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" prefWidth="480.0" text="(1): Enable / (0): Disable the fence functionality">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="350.0" text="FENCE_ACTION [ 0 ~ 1 | (N/A) ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtFenceAction" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" minHeight="-Infinity" prefHeight="50.0" prefWidth="480.0" text="What action should be taken when fence is breached.&#10;(0): Report Only / (1): RTL or Land">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="350.0" text="FENCE_ALT_MAX [ 10 ~ 1000 | m ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtFenceAltMax" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" prefWidth="480.0" text="Maximum altitude allowed before geo-fence triggers">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="350.0" text="FENCE_MARGIN [ 1 ~ 10 | m ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtFenceMargin" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" prefHeight="40.0" prefWidth="480.0" text="Distance that autopilot’s should maintain from the fence&#10;to avoid a breach">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+                                 <children>
+                                    <Label id="lblNotice" fx:id="lblNotice">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/settings_battery.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="lblSettingsName" prefHeight="15.0" prefWidth="98.0" text="BATT" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="400.0" text="BATT_CAPACITY [ 0 ~ ∞ | mAh ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtBattCapacity" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" prefWidth="530.0" text="Capacity of the battery in mAh when full">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="400.0" text="BATT_LOW_VOLT [ 0 ~ ∞ | V ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtBattLowVolt" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" prefWidth="530.0" text="(None)">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/settings_wpnav.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="lblSettingsName" prefHeight="15.0" prefWidth="98.0" text="WPNAV" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="400.0" text="WPNAV_RADIUS [ 10 ~ 1000 | cm ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtWpnavRadius" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" minHeight="-Infinity" prefHeight="50.0" prefWidth="530.0" text="Defines the distance from a waypoint, that when crossed&#10;indicates the wp has been hit">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="400.0" text="WPNAV_SPEED [ 20 ~ 2000 | cm/s ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtWpnavSpeed" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" minHeight="-Infinity" prefHeight="50.0" prefWidth="530.0" text="Defines the speed in cm/s which the aircraft will attempt to&#10;maintain horizontally during a WP mission">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="23.0">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="400.0" text="WPNAV_SPEED_DN [ 10 ~ 500 | cm/s ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtWpnavDn" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" minHeight="-Infinity" prefHeight="50.0" prefWidth="530.0" text="Defines the speed in cm/s which the aircraft will attempt to&#10;maintain while descending during a WP mission">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="400.0" text="WPNAV_SPEED_UP [ 10 ~ 500 | cm/s ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtWpnavUp" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" minHeight="-Infinity" prefHeight="50.0" prefWidth="530.0" text="Defines the speed in cm/s which the aircraft will attempt to&#10;maintain while climbing during a WP mission">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="400.0" text="WPNAV_ACCEL [ 50 ~ 500 | cm/s/s ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtWpnavAccel" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" prefWidth="530.0" text="Defines the horizontal acceleration in cm/s/s used during missions">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label id="lblSettingsParamName" prefWidth="400.0" text="WPNAV_ACCEL_Z [ 50 ~ 500 | cm/s/s ]">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox prefWidth="10.0" />
+                                          <TextField id="txtSettings" fx:id="txtWpnavAccelZ" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="lblSettingsDetail" prefWidth="530.0" text="Defines the vertical acceleration in cm/s/s used during missions">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+   </padding>
+</HBox>

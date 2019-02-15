@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="vbox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gcs.ctrlstat.CtrlstatController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="570.0" spacing="10.0" style="-fx-background-color: #2C3034;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="70.0" spacing="5.0">
+               <children>
+                  <TextField id="txtCtrlstat" fx:id="txtAltitude" alignment="CENTER_RIGHT" text="10">
+                     <font>
+                        <Font name="D2Coding" size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label id="labelCtrlstat2" alignment="CENTER" contentDisplay="CENTER" text="m" textAlignment="CENTER" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <Button id="btnCtrlstat" fx:id="btnArm" mnemonicParsing="false" prefWidth="75.0" text="Arm">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnCtrlstat" fx:id="btnChangeAlt" mnemonicParsing="false" prefWidth="60.0" text="CAlt">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnCtrlstat" fx:id="btnTakeoff" mnemonicParsing="false" prefWidth="75.0" text="TakeOff">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnCtrlstat" fx:id="btnLand" mnemonicParsing="false" prefWidth="60.0" text="Land">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnCtrlstat" fx:id="btnRtl" mnemonicParsing="false" prefWidth="60.0" text="RTL">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnCtrlstat" fx:id="btnResetHome" mnemonicParsing="false" prefWidth="70.0" text="ResetH">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnCtrlstat" fx:id="btnGoTo" mnemonicParsing="false" prefWidth="60.0" text="GoTo">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <TabPane prefHeight="605.0" prefWidth="590.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Sensor Status">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #222222;">
+                     <center>
+                        <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background: #222222; -fx-border-color: #222222;" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+                           <content>
+                              <GridPane id="grid" maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="441.0" prefWidth="586.0" vgap="10.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="NEVER" maxWidth="150.0" minWidth="10.0" prefWidth="135.0" />
+                                  <ColumnConstraints hgrow="NEVER" maxWidth="152.0" minWidth="10.0" prefWidth="140.0" />
+                                    <ColumnConstraints hgrow="NEVER" maxWidth="171.0" minWidth="10.0" prefWidth="171.0" />
+                                    <ColumnConstraints hgrow="NEVER" maxWidth="171.0" minWidth="10.0" prefWidth="156.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" percentHeight="31.25" prefHeight="100.0" vgrow="NEVER" />
+                                  <RowConstraints minHeight="10.0" percentHeight="42.0" prefHeight="58.0" vgrow="NEVER" />
+                                  <RowConstraints minHeight="10.0" percentHeight="31.25" prefHeight="100.0" vgrow="NEVER" />
+                                </rowConstraints>
+                                 <children>
+                                    <VBox minHeight="-Infinity" prefHeight="120.0" prefWidth="136.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/ctr_coordinates.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label id="labelCtrlstat3" fx:id="lblPosture" prefHeight="15.0" prefWidth="98.0" text="POSTURE" />
+                                             </children>
+                                          </HBox>
+                                          <Label id="labelCtrlstat1" text="Roll">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" text="Pitch">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" text="Yaw">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox minHeight="-Infinity" prefHeight="60.0" prefWidth="100.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/ctr_position.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label id="labelCtrlstat3" fx:id="lblPosition" prefHeight="15.0" prefWidth="98.0" text="POSITION" />
+                                             </children>
+                                          </HBox>
+                                          <Label id="labelCtrlstat1" text="Lat">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" text="Lng">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" text="Alt(rel)">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" layoutX="10.0" layoutY="56.0" text="Alt(abs)">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" text="Head">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox minHeight="-Infinity" prefHeight="60.0" prefWidth="100.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/ctr_speed.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label id="labelCtrlstat3" fx:id="lblSpeed" prefHeight="15.0" prefWidth="98.0" text="SPEED" />
+                                             </children>
+                                          </HBox>
+                                          <Label id="labelCtrlstat1" text="ASpeed">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" text="GSpeed">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" text="VSpeed">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox minHeight="-Infinity" prefHeight="40.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/ctr_height.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label id="labelCtrlstat3" fx:id="lblRngfnd" prefHeight="15.0" prefWidth="87.0" text="RNGFND" />
+                                             </children>
+                                          </HBox>
+                                          <Label id="labelCtrlstat1" text="Input Voltage">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" layoutX="10.0" layoutY="26.0" text="Surface Distance">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="128.0" prefWidth="145.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" spacing="10.0" />
+                                          <Label id="labelCtrlstat2" fx:id="lblRoll" text="roll">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblPitch" text="pitch">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblYaw" text="yaw">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" spacing="10.0" />
+                                          <Label id="labelCtrlstat2" fx:id="lblLat" text="lat">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblLng" text="lng">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblAlt" text="alt(rel)">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblAltAbs" layoutX="10.0" layoutY="60.0" text="alt(abs)">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblHead" text="head">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox id="labelCtrstat2" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" spacing="10.0" />
+                                          <Label id="labelCtrlstat2" fx:id="lblAspeed" text="aspeed">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblGspeed" text="gspeed">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblVspeed" text="vspeed">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox id="labelCtrstat2" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" spacing="10.0" />
+                                          <Label id="labelCtrlstat2" fx:id="lblRangeFinderVoltage" text="rngfnd volt">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblRangeFinderDistance" layoutX="10.0" layoutY="30.0" text="rngfnd dist">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox GridPane.columnIndex="2">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/ctr_battery.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label id="labelCtrlstat3" fx:id="lblBattery" prefHeight="15.0" prefWidth="98.0" text="BATTERY" />
+                                             </children>
+                                          </HBox>
+                                          <Label id="labelCtrlstat1" text="Percentage">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" text="Voltage">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" text="Current">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="3">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" spacing="10.0" />
+                                                <Label id="labelCtrlstat2" fx:id="lblBatPer" text="percentage">
+                                                   <font>
+                                                      <Font name="Arial" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label id="labelCtrlstat2" fx:id="lblBatVolt" text="voltage">
+                                                   <font>
+                                                      <Font name="Arial" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label id="labelCtrlstat2" fx:id="lblBatCur" text="current">
+                                                   <font>
+                                                      <Font name="Arial" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/ctr_gps.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label id="labelCtrlstat3" fx:id="lblGPS" prefHeight="15.0" prefWidth="98.0" text="GPS" />
+                                             </children>
+                                          </HBox>
+                                          <Label id="labelCtrlstat1" text="Hdop">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" layoutX="10.0" layoutY="26.0" text="Vdop">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" text="FixType">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" text="Stl visible">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat1" layoutX="10.0" layoutY="71.0" text="GPS Time">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" spacing="10.0" />
+                                          <Label id="labelCtrlstat2" fx:id="lblGpsHdop" text="hdop">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblGpsVdop" layoutX="10.0" layoutY="26.0" text="vdop">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblGpsFixType" text="fixtype">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblGpsSatellites" text="stl visible">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="labelCtrlstat2" fx:id="lblGpsTime" layoutX="10.0" layoutY="75.0" text="gps time">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab text="Companion COM Status">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #222222;">
+                     <top>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="70.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <VBox alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="110.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="TOP_CENTER" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="20.0" prefWidth="100.0" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/ctr_cpu.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="labelCtrlstat3" fx:id="lblCpuLoadTip" prefHeight="15.0" prefWidth="74.0" text="CPU LOAD" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="labelCtrlstat2" fx:id="lblCpuLoad" text="cpu_load%">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="110.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" prefWidth="100.0" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/ctr_ram.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="labelCtrlstat3" fx:id="lblRamLoadTip" text="RAM LOAD" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="labelCtrlstat2" fx:id="lblRamLoad" text="ram_load%">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children></VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="120.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/ctr_upload_speed.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="labelCtrlstat3" fx:id="lblNetUpSpeedTip" prefHeight="15.0" prefWidth="98.0" text="UP SPEED" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="labelCtrlstat2" fx:id="lblNetUpSpeed" text="000kbps">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children></VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/ctr_download_speed.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="labelCtrlstat3" fx:id="lblNetDownSpeedTip" prefHeight="15.0" text="DOWN SPEED" />
+                                       </children>
+                                    </HBox>
+                                    <Label id="labelCtrlstat2" fx:id="lblNetDownSpeed" text="00kbps">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children></VBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </top>
+                     <center>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="506.0" prefWidth="440.0" style="-fx-background: #222222; -fx-border-color: #222222;" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+                           <content>
+                              <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="500.0">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                             <children>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/ctr_cpu.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label text="CPU" />
+                                                <Label layoutX="23.0" layoutY="73.0" text="(%)" />
+                                             </children>
+                                          </VBox>
+                                          <AreaChart fx:id="chartCpuLoad" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="120.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" style="-fx-background-color: #2C3034;" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                             <children>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/ctr_ram.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label text="RAM" />
+                                                <Label layoutX="23.0" layoutY="73.0" text="(%)" />
+                                             </children>
+                                          </VBox>
+                                          <AreaChart fx:id="chartRamLoad" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="120.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" style="-fx-background-color: #2C3034;" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                             <children>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/ctr_network_speed.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label text="NAT" />
+                                                <Label layoutX="23.0" layoutY="73.0" text="(Kbps)" />
+                                                <HBox alignment="CENTER" prefHeight="20.0" prefWidth="45.0">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: #ff2a55;" text="Up" textFill="#ff2a55">
+                                                         <font>
+                                                            <Font size="9.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="25.0" layoutY="13.0" text="/">
+                                                         <font>
+                                                            <Font size="9.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="14.0" layoutY="15.0" style="-fx-text-fill: #FFD400;" text="Down">
+                                                         <font>
+                                                            <Font size="9.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <AreaChart fx:id="chartNetSpeed" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="190.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content></ScrollPane>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+          <Tab text="Downward CamView">
+               <content>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="vboxLower" prefHeight="200.0" prefWidth="100.0" />
+                        <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="180.0" prefWidth="180.0" StackPane.alignment="TOP_RIGHT">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button id="btnDettach" fx:id="btnDettach" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" prefWidth="56.0" text="Dettach" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font></Button>
+                              <Button id="btnAttach" fx:id="btnAttach" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" prefWidth="56.0" text="Attach" textAlignment="CENTER" textOverrun="CLIP" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font></Button>
+                              <Button id="btnHeading" fx:id="btnUp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" GridPane.columnIndex="1" />
+                              <Button id="btnHeading" fx:id="btnRight" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Button id="btnHeading" fx:id="btnLeft" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" GridPane.rowIndex="1" />
+                              <Button id="btnHeading" fx:id="btnDown" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button id="btnHeading" fx:id="btnN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtMicroControl" alignment="CENTER" GridPane.columnIndex="2" />
+                           </children>
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </GridPane>
+                     </children>
+                  </StackPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

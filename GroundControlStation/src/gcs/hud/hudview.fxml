@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="stackPane" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gcs.hud.HudViewController">
+   <children>
+      <Canvas fx:id="canvasCamera" height="370.0" translateY="16.0" width="520.0" />
+      <Canvas fx:id="canvas1" height="370.0" translateY="16.0" width="520.0" />
+      <Canvas fx:id="canvas2" height="370.0" translateY="16.0" width="520.0" />
+      <Canvas fx:id="canvasIndicator" height="370.0" translateY="16.0" width="520.0" />
+      <Canvas fx:id="canvas3" height="370.0" translateY="16.0" width="520.0" />
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="TOP_CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="520.0" spacing="10.0">
+               <children>
+                  <Button id="btnClear" fx:id="btnResetTimer" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" text="Reset Timer">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button id="btnClear" fx:id="btnSaveData" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" text="Save Data">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button id="btnClear" fx:id="btnCameraToggle" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" text="Show Camera">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button id="btnClear" fx:id="btnOnlyCamera" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" text="Only Camera">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="2.0" top="4.0" />
+               </padding>
+            </HBox>
+            <BorderPane fx:id="borderPane" prefHeight="450.0" prefWidth="520.0">
+               <left>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="370.0" prefWidth="280.0" spacing="10.0" BorderPane.alignment="BOTTOM_LEFT">
+                     <children>
+                        <HBox alignment="BOTTOM_CENTER" spacing="5.0">
+                           <children>
+                              <ImageView fx:id="imgArmed" fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/hud_arm_white.png" />
+                                 </image>
+                              </ImageView>
+                              <Label id="lblHud" fx:id="lblArmed" prefHeight="15.0" prefWidth="98.0" text="DISARMED" textFill="WHITE" />
+                              <ImageView fx:id="imgCargoInfo" fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/ctr_cargodettach.png" />
+                                 </image>
+                              </ImageView>
+                              <Label id="lblHud" fx:id="lblCargoInfo" prefHeight="15.0" prefWidth="98.0" text="Cargo" textFill="WHITE" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="BOTTOM_CENTER" spacing="5.0">
+                           <children>
+                              <ImageView fx:id="imgMode" fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/hud_mode_white.png" />
+                                 </image>
+                              </ImageView>
+                              <Label id="lblHud" fx:id="lblMode" prefHeight="15.0" prefWidth="98.0" text="MODE" textFill="WHITE" />
+                              <ImageView fx:id="imgHomeFix" fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/hud_fix.png" />
+                                 </image>
+                              </ImageView>
+                              <Label id="lblHud" fx:id="lblHomeFix" prefHeight="15.0" prefWidth="98.0" text="H.Fix" textFill="WHITE" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" />
+                     </padding>
+                  </VBox>
+               </left>
+               <right>
+                  <VBox alignment="BOTTOM_RIGHT" prefHeight="370.0" prefWidth="240.0" spacing="10.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="BOTTOM_RIGHT" layoutX="10.0" layoutY="425.0" spacing="5.0">
+                           <children>
+                              <Label id="lblHud" fx:id="lblHomeDistance" alignment="CENTER_RIGHT" prefHeight="15.0" text="0m up to Home" textAlignment="RIGHT" textFill="WHITE" />
+                              <ImageView fx:id="imgHomeDistance" fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/hud_home_distance_white.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="BOTTOM_RIGHT" spacing="5.0">
+                           <children>
+                              <Label id="lblHud" fx:id="lblWaypointInfo" alignment="CENTER_RIGHT" prefHeight="15.0" text="0m up to WP[0]" textAlignment="RIGHT" textFill="WHITE" />
+                              <ImageView fx:id="imgWaypointInfo" fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/hud_waypoint_white.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" right="10.0" />
+                     </padding>
+                  </VBox>
+               </right>
+            </BorderPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

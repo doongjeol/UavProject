@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//src/CameraBottomMqttClient.py=utf-8
+encoding//src/CameraFrontMqttClient.py=utf-8
+encoding//src/UavMqttClient.py=utf-8

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gcs.appmain.AppMainController">
+   <top>
+      <HBox fx:id="rootStatusPane" alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #2C3034;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="hboxStatGroup" layoutX="10.0" layoutY="10.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="184.0">
+                     <children>
+                        <Label id="lblStatBarTitle" alignment="CENTER" style="-fx-border-color: #FFFFFF; -fx-font-size: 12;" text="FC_FW&#10;Version" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label id="lblStatBarContent" fx:id="lblAutopilotVersion" style="-fx-font-size: 11;" text="APM Blah Blah" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="189.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <ImageView fx:id="imgBtnHLD" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/home.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="30.0">
+                           <children>
+                              <Label id="lblStatBarContent" text="Lat." textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label id="lblStatBarContent" layoutX="25.0" layoutY="24.0" text="Lng." textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" layoutX="127.0" layoutY="10.0" prefHeight="38.0" prefWidth="94.0">
+                           <children>
+                              <Label id="lblStatBarContent" fx:id="lblHomeLat" text="37.1234567" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label id="lblStatBarContent" fx:id="lblHomeLng" layoutX="25.0" layoutY="24.0" text="127.1234567" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="182.0">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/marker.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="8.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="30.0">
+                           <children>
+                              <Label id="lblStatBarContent" text="Lat." textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label id="lblStatBarContent" layoutX="25.0" layoutY="24.0" text="Lng." textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" layoutX="127.0" layoutY="10.0" prefHeight="38.0" prefWidth="95.0">
+                           <children>
+                              <Label id="lblStatBarContent" fx:id="lblLat" text="37.1234567" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label id="lblStatBarContent" fx:id="lblLng" layoutX="25.0" layoutY="24.0" text="127.1234567" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="192.0">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/battery.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label id="lblStatBarContent" fx:id="lblBattery" prefHeight="18.0" prefWidth="140.0" style="-fx-font-size: 11;" text="75.0% / 15.398V / 28.9A" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="145.0">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/satellite.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label id="lblStatBarContent" fx:id="lblGps" prefHeight="18.0" prefWidth="97.0" style="-fx-font-size: 11;" text="RTK_FIXED / 12" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="146.0">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/test.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label id="lblStatBarContent" fx:id="lblCheckContestPrep" prefHeight="36.0" prefWidth="104.0" text="NOT READY" textFill="WHITE">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox layoutX="1503.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="lblDate" text="Mon, 12 Mar 2018" textFill="WHITE">
+               <padding>
+                  <Insets top="4.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="925.0" layoutY="17.0" text="13:23:49" textFill="#bfbfbf">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" top="2.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets right="15.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <HBox prefHeight="100.0" prefWidth="85.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="rootMenuPane" alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="200.0" prefWidth="85.0" spacing="20.0" style="-fx-background-color: #2C3034;" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" prefWidth="85.0">
+                     <children>
+                        <ImageView fx:id="imgConnectStatus" fitHeight="28.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/trafficlight_red.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ImageView>
+                        <HBox fx:id="hboxBtnConnect" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="75.0" spacing="5.0" style="-fx-border-color: #888888; -fx-border-radius: 15px;">
+                           <children>
+                              <Label fx:id="lblConnect" text="Connect" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="195.0" prefWidth="85.0" spacing="10.0">
+                     <children>
+                        <ImageView fx:id="imgBtnHome" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/home_selected.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgBtnConfig" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/config_unselected.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgBtnInfo" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/info_unselected.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgBtnGallery" disable="true" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/gallery_unselected.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="0.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
+                  <VBox fx:id="vboxDistGroup" alignment="TOP_CENTER" layoutX="10.0" layoutY="420.0" prefHeight="0.0" prefWidth="100.0" spacing="5.0" visible="false">
+                     <children>
+                        <ImageView fx:id="imgBtnBLD" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/distance.png" />
+                           </image>
+                        </ImageView>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" prefWidth="200.0">
+                           <children>
+                              <Label text="H.d" textFill="WHITE" />
+                              <TextField fx:id="txtHd" disable="true" minWidth="-Infinity" prefWidth="40.0" style="-fx-background-color: #103554; -fx-text-fill: WHITE;" text="0.00">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" prefWidth="200.0">
+                           <children>
+                              <Label text="W.d" textFill="WHITE" />
+                              <TextField fx:id="txtWd" disable="true" minWidth="-Infinity" prefWidth="40.0" style="-fx-background-color: #103554; -fx-text-fill: WHITE;" text="0.00">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" prefWidth="200.0">
+                           <children>
+                              <Label text="L.d" textFill="WHITE" />
+                              <TextField fx:id="txtLd" disable="true" minWidth="-Infinity" prefWidth="40.0" style="-fx-background-color: #103554; -fx-text-fill: WHITE;" text="0.00">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="120.0" prefHeight="103.0" prefWidth="110.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="60.0" prefHeight="20.0" prefWidth="110.0" spacing="5.0" visible="false">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Pic." textFill="WHITE" />
+                                    <RadioButton fx:id="radioBtnPicture" contentDisplay="RIGHT" graphicTextGap="0.0" mnemonicParsing="false" selected="true" textFill="WHITE">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="captureGroup" />
+                                       </toggleGroup>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </RadioButton>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" disable="true" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label disable="true" text="Rec." textFill="WHITE" />
+                                    <RadioButton fx:id="radioBtnRecord" contentDisplay="RIGHT" disable="true" graphicTextGap="0.0" mnemonicParsing="false" textFill="WHITE" toggleGroup="$captureGroup">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </RadioButton>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="2.0" right="2.0" />
+                           </padding>
+                        </HBox>
+                        <ImageView fx:id="imgBtnCapture" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/capture_unselected.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <StackPane fx:id="rootStackPane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="infoPane" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #222222;" />
+            <HBox fx:id="configPane" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #222222;" />
+            <HBox fx:id="capturePane" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #222222;" />
+            <HBox fx:id="homePane" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox fx:id="homeLeftPane" minWidth="-Infinity" prefHeight="200.0" prefWidth="520.0" style="-fx-background-color: #222222;">
+                     <children>
+                        <Pane fx:id="homeHudPane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="400.0" prefWidth="520.0" style="-fx-background-color: #222222;" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="homeRightPane" prefHeight="1030.0" prefWidth="1220.0" style="-fx-background-color: #222222;" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
